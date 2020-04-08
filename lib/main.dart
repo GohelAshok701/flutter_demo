@@ -3,23 +3,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 
 import 'home.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return MaterialApp(
-      title: "Fultter Demo",
-      theme: ThemeData(primaryColor: Colors.red),
-      home: MyHomePage(title: "Home Page"),
-    );
-  }
-}
-
 class MyHomePage extends StatelessWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-  final String title;
   final _email = TextEditingController();
   final _passeord = TextEditingController();
 
@@ -29,7 +13,7 @@ class MyHomePage extends StatelessWidget {
 
     return Scaffold(
         appBar: AppBar(
-          title: Text(this.title),
+          title: Text("Home Page"),
         ),
         body: Center(
           child: Container(
