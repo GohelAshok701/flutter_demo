@@ -1,11 +1,11 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutterdemo/base.dart';
-import 'package:flutterdemo/main.dart';
+import 'package:flutterdemo/base_screen.dart';
+import 'package:flutterdemo/login_screen.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends base {
+class MyApp extends base_screen {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -19,7 +19,10 @@ class MyApp extends base {
 
 class SplashScreen extends StatefulWidget {
   @override
-  _SplashScreenState createState() => _SplashScreenState();
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return _SplashScreenState();
+  }
 }
 
 class _SplashScreenState extends State<SplashScreen> {
@@ -28,16 +31,16 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Timer(
         Duration(seconds: 3),
-            () => Navigator.of(context).pushReplacement(MaterialPageRoute(
-            builder: (BuildContext context) => MyHomePage())));
+        () => Navigator.of(context).pushReplacement(MaterialPageRoute(
+            builder: (BuildContext context) => LoginScreen())));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.orange,
       body: Center(
-        child: Image.asset('assets/ic_home.png'),
+        child: Image.asset('assets/ic_home.png',color: Colors.white,),
       ),
     );
   }

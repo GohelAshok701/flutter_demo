@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutterdemo/base.dart';
+import 'package:flutterdemo/base_screen.dart';
 
-class SecondRoute extends base {
+class DashboardScreen extends base_screen {
   final List<String> _listViewData = [
     "Ashok Gohel",
     "Ashvin Gohel",
@@ -15,7 +15,8 @@ class SecondRoute extends base {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.orange,
-        title: Text("Home"),
+        title: Text("Home",
+            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
       ),
       body: Container(
           margin: EdgeInsets.all(10),

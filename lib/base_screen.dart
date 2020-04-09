@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
-class base extends StatelessWidget {
+class base_screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

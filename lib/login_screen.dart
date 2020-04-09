@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutterdemo/base.dart';
+import 'package:flutterdemo/base_screen.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
-import 'home.dart';
+import 'dashboard_screen.dart';
 
-class MyHomePage extends base {
+class LoginScreen extends base_screen {
   final _email = TextEditingController();
   final _passeord = TextEditingController();
 
@@ -57,7 +57,7 @@ class MyHomePage extends base {
       showMessage("Login successfully");
 
       Navigator.of(context).pushReplacement(MaterialPageRoute(
-          builder: (BuildContext context) => SecondRoute()));
+          builder: (BuildContext context) => DashboardScreen()));
     }
   }
 }
