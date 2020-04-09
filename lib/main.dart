@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutterdemo/base.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 import 'home.dart';
 
-class MyHomePage extends StatelessWidget {
+class MyHomePage extends base {
   final _email = TextEditingController();
   final _passeord = TextEditingController();
 
@@ -12,9 +13,6 @@ class MyHomePage extends StatelessWidget {
     // TODO: implement build
 
     return Scaffold(
-        appBar: AppBar(
-          title: Text("Home Page"),
-        ),
         body: Center(
           child: Container(
               padding: EdgeInsets.all(20),
@@ -57,18 +55,9 @@ class MyHomePage extends StatelessWidget {
       showMessage("Please enter password");
     } else {
       showMessage("Login successfully");
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => SecondRoute()),
-      );
-    }
-  }
 
-  void showMessage(String message) {
-    Fluttertoast.showToast(
-        msg: message,
-        toastLength: Toast.LENGTH_SHORT,
-        gravity: ToastGravity.BOTTOM,
-        timeInSecForIos: 1);
+      Navigator.of(context).pushReplacement(MaterialPageRoute(
+          builder: (BuildContext context) => SecondRoute()));
+    }
   }
 }

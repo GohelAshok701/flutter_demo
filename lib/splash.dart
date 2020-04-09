@@ -1,16 +1,17 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutterdemo/base.dart';
 import 'package:flutterdemo/main.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
+class MyApp extends base {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
       title: "Fultter Demo",
-      theme: ThemeData(primaryColor: Colors.red),
+      theme: ThemeData(primaryColor: Colors.orange),
       home: SplashScreen(),
     );
   }
